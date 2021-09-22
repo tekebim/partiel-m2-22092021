@@ -13,8 +13,14 @@ final class RomanNumeralTest extends TestCase
         $this->assertEquals('V', RomanNumeral::decimalToRoman(5));
         $this->assertEquals('VI', RomanNumeral::decimalToRoman(6));
     }
+
     public function testZeroShouldNotBeConvertibleToRomanChar(): void
     {
         $this->assertEquals('', RomanNumeral::decimalToRoman(0));
+    }
+
+    public function testTooBigNumberShouldNotBeConvertibleToRomanChar(): void
+    {
+        $this->assertEquals('', RomanNumeral::decimalToRoman(3001));
     }
 }
