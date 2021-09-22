@@ -23,4 +23,9 @@ final class RomanNumeralTest extends TestCase
     {
         $this->assertEquals('', RomanNumeral::decimalToRoman(3001));
     }
+
+    public function testTooNegativeNumberShouldNotBeConvertibleToRomanChar(): void
+    {
+        $this->assertEquals('', RomanNumeral::decimalToRoman(-1));
+    }
 }

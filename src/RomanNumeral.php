@@ -4,7 +4,7 @@ class RomanNumeral
 {
     public static function decimalToRoman(int $decimalNumber): string
     {
-        if ($decimalNumber === 0 || $decimalNumber > 3000) {
+        if ($decimalNumber < 0 || $decimalNumber === 0 || $decimalNumber > 3000) {
             return '';
         }
         if ($decimalNumber === 1) {
