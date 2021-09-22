@@ -16,6 +16,8 @@ final class RomanNumeralTest extends TestCase
         $this->assertEquals('VIII', RomanNumeral::decimalToRoman(8));
         $this->assertEquals('IX', RomanNumeral::decimalToRoman(9));
         $this->assertEquals('X', RomanNumeral::decimalToRoman(10));
+        $this->assertEquals('XI', RomanNumeral::decimalToRoman(11));
+        // $this->assertEquals('XXIV', RomanNumeral::decimalToRoman(24));
     }
 
     public function testZeroShouldNotBeConvertibleToRomanChar(): void
@@ -31,5 +33,12 @@ final class RomanNumeralTest extends TestCase
     public function testTooNegativeNumberShouldNotBeConvertibleToRomanChar(): void
     {
         $this->assertEquals('', RomanNumeral::decimalToRoman(-1));
+    }
+
+    public function testRomanNumbersShouldBeConvertibleToInt(): void
+    {
+        $this->assertEquals(1, RomanNumeral::romanToDecimal('I'));
+        $this->assertEquals(5, RomanNumeral::romanToDecimal('V'));
+        $this->assertEquals(9, RomanNumeral::romanToDecimal('IX'));
     }
 }
