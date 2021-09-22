@@ -7,14 +7,13 @@ class RomanNumeral
         if ($decimalNumber < 0 || $decimalNumber === 0 || $decimalNumber > 3000) {
             return '';
         }
-        if ($decimalNumber === 1) {
-            return 'I';
-        }
-        if ($decimalNumber === 2) {
-            return 'II';
-        }
-        if ($decimalNumber === 3) {
-            return 'III';
+        if ($decimalNumber <= 3) {
+            $romanNumber = '';
+            while ($decimalNumber > 0) {
+                $romanNumber .= 'I';
+                $decimalNumber--;
+            }
+            return $romanNumber;
         }
         if ($decimalNumber === 4) {
             return 'IV';
