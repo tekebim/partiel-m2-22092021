@@ -15,14 +15,29 @@ class RomanNumeral
             }
             return $romanNumber;
         }
+
         if ($decimalNumber === 4) {
             return 'IV';
         }
-        if ($decimalNumber === 5) {
-            return 'V';
+
+        if ($decimalNumber === 5 || $decimalNumber === 6 || $decimalNumber === 7 || $decimalNumber === 8) {
+            $rest = $decimalNumber - 5;
+            $romanNumber = '';
+            if ($rest === 0) {
+                return 'V';
+            }
+
+            $romanNumber .= 'V';
+
+            for ($i = 0; $i < $rest; $i++) {
+                $romanNumber .= 'I';
+            }
+
+            return $romanNumber;
         }
-        if ($decimalNumber === 6) {
-            return 'VI';
+
+        if ($decimalNumber === 9) {
+            return 'IX';
         }
     }
 }
