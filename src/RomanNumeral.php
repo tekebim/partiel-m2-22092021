@@ -2,8 +2,8 @@
 
 class RomanNumeral
 {
-    public static function decimalToRoman(string $string): string
+    public static function decimalToRoman(string $decimalNumber): string
     {
-        return "1";
+        return $decimalNumber;
     }
 }
