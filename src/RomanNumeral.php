@@ -17,15 +17,16 @@ class RomanNumeral
             return $romanNumber;
         }
 
-        if ($decimalNumber === 4 || $decimalNumber === 5 || $decimalNumber === 6 || $decimalNumber === 7 || $decimalNumber === 8 || $decimalNumber === 9) {
-            if ($decimalNumber - 5 >= -1) {
-                $charFive = 'V';
-                $rest = $decimalNumber - 5;
-            }
+        if ($decimalNumber === 4 || $decimalNumber === 5 || $decimalNumber === 6 || $decimalNumber === 7 || $decimalNumber === 8 || $decimalNumber === 9 || $decimalNumber === 10) {
+
             if ($decimalNumber - 10 >= -1) {
                 $charFive = 'X';
                 $rest = $decimalNumber - 10;
+            } else if ($decimalNumber - 5 >= -1) {
+                $charFive = 'V';
+                $rest = $decimalNumber - 5;
             }
+
             $romanNumber = '';
 
             if ($rest === -1) {
