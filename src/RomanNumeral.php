@@ -17,12 +17,19 @@ class RomanNumeral
             return $romanNumber;
         }
 
+
         if ($decimalNumber === 4 || $decimalNumber === 5 || $decimalNumber === 6 || $decimalNumber === 7 || $decimalNumber === 8 || $decimalNumber === 9 || $decimalNumber === 10 || $decimalNumber === 11 || $decimalNumber === 24) {
 
             $arrayRoman = [
+                10 => 'X',
                 5 => 'V',
-                10 => 'X'
             ];
+
+            // while ($decimalNumber > 0) {
+            //    foreach ($arrayRoman as $numeric => $roman) {
+            //        $decimalNumber - $numeric;
+            //    }
+            // }
 
             $rest = 0;
 
