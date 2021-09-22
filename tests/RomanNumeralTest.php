@@ -6,6 +6,6 @@ final class RomanNumeralTest extends TestCase
 {
     public function testIsRoman(): void
     {
-        $this->assertEquals('I', RomanNumeral::decimalToRoman("I"));
+        $this->assertEquals('I', RomanNumeral::decimalToRoman("1"));
     }
 }

@@ -4,6 +4,6 @@ class RomanNumeral
 {
     public static function decimalToRoman(string $string): string
     {
-        return "I";
+        return "1";
     }
 }
