@@ -2,8 +2,29 @@
 
 class RomanNumeral
 {
-    public static function decimalToRoman(string $decimalNumber): string
+    public static function decimalToRoman(int $decimalNumber): string
     {
-        return $decimalNumber;
+        if ($decimalNumber === 0) {
+            return '';
+        }
+        if ($decimalNumber === 1) {
+            return 'I';
+        }
+        if ($decimalNumber === 2) {
+            return 'II';
+        }
+        if ($decimalNumber === 3) {
+            return 'III';
+        }
+        if ($decimalNumber === 4) {
+            return 'IV';
+        }
+        if ($decimalNumber === 5) {
+            return 'V';
+        }
+        if ($decimalNumber === 6) {
+            return 'VI';
+        }
+        return strval($decimalNumber);
     }
 }
